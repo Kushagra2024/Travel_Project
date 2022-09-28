@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"> 
+    <link href="http://fonts.cdnfonts.com/css/claris-sans" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/owl.carousel.min.css">
+    <title>Bharatravel</title>
+</head>
+
+<body>
+    <div class="navbar_div">
+        <ul class="navbar__list">
+            <li>
+                <a href="../Index.html" class="logo">
+                    <h1 class="logo__text">Bharatravel.Com</h1>
+                </a>
+            </li>
+            <li>
+                <nav class="navbar">
+                    <a href="../Index.html" class="navbar__home">
+                        <img src="../IMAGES/ICONS/home_icon.png" alt="home_icon" class="navbar__home--img navbar__img">
+                        <p class="navbar__home--para">Home</p>
+                    </a>
+                    <a href="../HTML/flight.html" class="navbar__airplane">
+                        <img src="../IMAGES/ICONS/airplane_icon.png" alt="airplane_icon" class="navbar__airplane--img navbar__img">
+                        <p class="navbar__airplane--para">Flight</p>
+                    </a>
+                    <a href="../HTML/train.html" class="navbar__train">
+                        <img src="../IMAGES/ICONS/train_icon.png" alt="train_icon" class="navbar__train--img navbar__img">
+                        <p class="navbar__train--para">Train</p>
+                    </a>
+                    <a href="../HTML/bus.html" class="navbar__bus">
+                        <img src="../IMAGES/ICONS/bus_icon.png" alt="bus_icon" class="navbar__bus--img navbar__img">
+                        <p class="navbar__bus--para">Bus</p>
+                    </a>
+                    <a href="../HTML/cab.html" class="navbar__car">
+                        <img src="../IMAGES/ICONS/car_icon.png" alt="car_icon"  class="navbar__car--img navbar__img">
+                        <p  class="navbar__car--para">Cab</p>
+                    </a>
+                    <a href="../HTML/hotel.html" class="navbar__hotel">
+                        <img src="../IMAGES/ICONS/hotel_icon.png" alt="hotel_icon" class="navbar__hotel--img navbar__img">
+                        <p class="navbar__hotel--para">hotel</p>
+                    </a>
+                </nav>
+            </li>
+            <li>
+                <div class="navbar__btncrncy">
+                    <div class="button" id="button">
+                        <button class="button__LogIn" value="login" onclick="displaymodal(this.value)">Sign in</button>
+                        <button class="button__SignIn" value="signin" onclick="displaymodal(this.value)">Sign up</button>
+                    </div>
+
+                    <div class="payment_container">
+                        <div class="payment_container_visible">
+                            <span class="">
+                                <img src="../IMAGES/ICONS/indian_flag.png" alt="indian" class="indian_flag__img">
+                            </span>
+                            <span class="american_flag">
+                                <img src="../IMAGES/ICONS/american_flag.png" alt="american" class="american_flag__img">
+                            </span>
+                            <span>
+                                |
+                                <span class="country">IN</span>
+                                |
+                                <span class="currency">INR</span>
+                            </span>
+                            <span class="carddownarrow" id="carddownarrow" onclick="dropdowncard('carddownarrow','carduparrow','dropdowncard')"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                            <span class="carduparrow" id="carduparrow" onclick="dropdowncard('carddownarrow','carduparrow','dropdowncard')"><i class="fa fa-chevron-up" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="dropdowncard" id="dropdowncard">
+                            <div class="crncyddwrap" id="crncyddwrap">
+                                <div class="crncyddwrap__text">
+                                    <span>
+                                        <img src="../IMAGES/ICONS/indian_flag.png" alt="indian_flag"  class="indian_flag__img">
+                                    </span>
+                                    <span>
+                                        India
+                                    </span>
+                                    <span class="crncyddwrap__text--down" id="crncyddwrap__text--down" onclick="dropdownsubcard('cntryddwrap')"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="crncyddwrap__crncy">
+                                    <span>Currency</span> 
+                                    <input type="radio" name="" id="crncy_radio" class="crncy_radio" checked>
+                                    <label for="crncy_radio">INR</label>
+                                </div>
+                                <button class="crncyddwrap__button">
+                                    Apply Changes
+                                </button>
+                            </div>
+                            <div class="cntryddwrap" id="cntryddwrap">
+                                <div class="cntryddwrap__text">
+                                    Select Country
+                                    <span class="cntryddwrap__text--up" id="cntryddwrap__text--up" onclick="dropdownsubcard('crncyddwrap')"><i class="fa fa-chevron-up" aria-hidden="true"></i></span>
+                                </div>
+                                <div>
+                                    <ul class="cntryddwrap__text--list">
+                                        <li>
+                                            <span>
+                                                <img src="../IMAGES/ICONS/indian_flag.png" alt="" class="indian_flag__img">
+                                            </span>
+                                            <span>
+                                                India
+                                            </span>
+                                            <span>
+                                                <input type="radio" name="country_select" id="cntryddwrap__text--list--india" class="cntryddwrap__text--list--india" checked>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+                                                <img src="../IMAGES/ICONS//american_flag.png" alt="" class="american_flag__img">
+                                            </span>
+                                            <span>
+                                                America
+                                            </span>
+                                            <span>
+                                                <input type="radio" name="country_select" id="cntryddwrap__text--list--america" class="cntryddwrap__text--list--america">
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay" onclick="closemodal()"></div>
+    <div class="modal__signup" id="modal__signup">
+        Sign In Form
+    </div>
+    <div class="modal__login" id="modal__login">
+        <form action="get" class="login_form">
+            <h1>Sign in</h1>
+            <span>
+                <input type="email" placeholder=" " class="email_text_box" name="" id="email_text_box"
+                    autocomplete="off" onchange="inputClick('email_text_box','email')"
+                    onclick="statechange('email_text_box','dialogBox_email','email_label','Email')"
+                    onkeyup="validation('email_text_box','email')">
+                <label for="email_text_box" class="email_label"> Email </label>
+            </span>    
+            <span>
+                <input type="password" placeholder=" " class="password_text_box" name="" id="password_text_box"
+                    onchange="inputClick('password_text_box','password')"
+                    onclick="statechange('password_text_box','dialogBox_password','password_label','Password')"
+                    onkeyup="validation('password_text_box','password')">
+                <label for="password_text_box" class="password_label"> Password </label>
+            </span>
+            <button type="button" id="submit_btn" class="submit_Button button_Deactive"
+                onclick='dialogueBox();activebutton()'>
+                Log In
+            </button>
+            <div class="dialogBox_email">
+                <p id="dialogBox_email"></p>
+            </div>
+            <div class="dialogBox_password">
+                <p id="dialogBox_password"></p>
+            </div>
+        </form>
+    </div>
+    <div class="wrapper">
+        <header>
+            <video autoplay muted>
+                <source src="../VIDEOS/Pexels Videos 1826904.mp4" type="video/mp4">
+            </video>
+            <div class="wrapper__div">
+                <h1 class="wrapper__div--h1">
+                    Lorem ipsum dolor
+                </h1>      
+                <p class="wrapper__div--p">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, nobis.
+                </p>
+            </div>
+        </header>
+        <section class="main_body">
+            <!-- <div class="slider_container">
+                <div class="left_arrow arrow">
+                    <span onclick="slide_carousel('left')">
+                        &#8249
+                    </span>
+                </div>
+                <div class="slider" id="slider">
+                    <img class="img_test " src="https://via.placeholder.com/364?text=5">
+                    <img class="img_test " src="https://via.placeholder.com/364?text=1">
+                    <img class="img_test center" src="https://via.placeholder.com/364?text=2">
+                    <img class="img_test " src="https://via.placeholder.com/364?text=3">
+                    <img class="img_test " src="https://via.placeholder.com/364?text=4">
+                    <img class="img_test " src="https://via.placeholder.com/364?text=5">
+                    <img class="img_test " src="https://via.placeholder.com/364?text=1">
+                </div>
+                <div class="right_arrow arrow">
+                    <span onclick="slide_carousel('right')">
+                        &#8250
+                    </span>
+                </div>
+            </div> -->
+            <section id="slider" class="pt-5">
+                <div class="container">
+                  <h1 class="text-center"><b>Services</b></h1>
+                    <div class="slider">
+                        <div class="owl-carousel">
+                            <div class="slider-card">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <img src="../IMAGES/aboutslider2-1.jpg" alt="" >
+                                    <div class="layer">
+                                    <h3>PRAYAGRAJ(UCER)</h3>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="slider-card">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <img src="../IMAGES/E36LGJMVkAAakyg.jpg" alt="">
+                                    <div class="layer">
+                                    <h3>PRAYAGRAJ(UCER)</h3>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="slider-card">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <img src="../IMAGES/photo-1569433295058-aaa6338e25c4.jpeg" alt="">
+                                    <div class="layer">
+                                    <h3>PRAYAGRAJ(UCER)</h3>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="slider-card">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <img src="../IMAGES/restaurant-3.jpg" alt="">
+                                    <div class="layer">
+                                    <h3>PRAYAGRAJ(UCER)</h3>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="slider-card">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <img src="../IMAGES/E36LGJMVkAAakyg.jpg" alt="">
+                                    <div class="layer">
+                                    <h3>PRAYAGRAJ(UCER)</h3>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <button type="button" style="width: 50px; height: 30px; position: relative; top: 20px;" onclick="expand_card()">button</button> -->
+            <div class="service_wrapper_1 service_wrapper">
+                <div class="card_">
+                    <img src="../../Auction Project/Images/Stock Images/europeana-5TK1F5VfdIk-unsplash.jpg">
+                    <!-- <img src="" > -->
+                </div>
+                <div class="card_">
+                    <img src="../../Auction Project/Images/Stock Images/content-pixie-9l7r-n1zt-Y-unsplash.jpg">
+                    <!-- <img src="" > -->
+                </div>
+                <div class="card_">
+                    <img src="../../Auction Project/Images/Stock Images/pmv-chamara-wy7OK3cFqAY-unsplash.jpg">
+                    <!-- <img src="" > -->
+                </div>
+                <div class="card_">
+                    <!-- <div class="test">
+                        See More
+                    </div> -->
+                    <img src="../../Auction Project/Images/Stock Images/sebastian-coman-travel-dtOTQYmTEs0-unsplash.jpg">
+                    <!-- <img src="" > -->
+                </div>
+            </div>
+            <div class="service_wrapper_2 service_wrapper">
+                <div class="card">
+                    <img src="">
+                </div>
+                <div class="card">
+                    <img src="">
+                </div>
+                <div class="card">
+                    <img src="">
+                </div>
+                <div class="card">
+                    <img src="">
+                </div>
+            </div>
+            <div class="service_wrapper_3 service_wrapper">
+                <div class="card">
+                    <img src="">
+                </div>
+                <div class="card">
+                    <img src="">
+                </div>
+                <div class="card">
+                    <img src="">
+                </div>
+                <div class="card">
+                    <img src="">
+                </div>
+            </div>
+            <div class="service_wrapper_4 service_wrapper">
+                <div class="card">
+                    <img src="">
+                </div>
+                <div class="card">
+                    <img src="">
+                </div>
+                <div class="card">
+                    <img src="">
+                </div>
+                <div class="card">
+                    <img src="">
+                </div>
+            </div>
+            <div class="service_wrapper_5 service_wrapper">
+                <div class="card">
+                    <img src="">
+                </div>
+                <div class="card">
+                    <img src="">
+                </div>
+                <div class="card">
+                    <img src="">
+                </div>
+                <div class="card">
+                    <img src="">
+                </div>
+            </div>
+                    <!-- -------------news letter ----------------------------- -->
+            <section class="newsletter section" id="subscription">
+                <div class="container">
+                    <h2 class="title section-title" data-name="Newsletter">Newsletter</h2>
+                    <div class="form-container-inner">
+                        <h6 class="title newsletter-title">Subscribe to Blogging Adda</h6>
+                        <p class="newsletter-description">Lorem ipsum dolor sit amet consectetur adipisicing quaerat
+                            dignissimos.</p>
+                        <form action="" class="form_1">
+                            <input class="form-input inputs" type="text" placeholder="Enter your email address">
+                            <button class="btn button form-btn" type="submit">
+                                <i class="ri-mail-send-line"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+                    <!-- ---------------footer-------------------- -->
+            <footer class="footer section">
+                <div class="footer-container container d-grid">
+                    <div class="company-data">
+                        <a href="../Index.html">
+                            <h2 class="logo">Bharatravel</h2>
+                        </a>
+                        <p class="company-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
+                            iure. Harum, animi dolores, nam, ad magni expedita.</p>
+    
+                        <div class="si">
+                            <a href="#" class="facebook-btn">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+    
+                            <a href="#" class="twitter-btn">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+    
+                            <a href="#" class="pinterest-btn">
+                                <i class="fa fa-pinterest"></i>
+                            </a>
+    
+                            <a href="#" class="linkedin-btn">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+    
+                            <a href="#" class="whatsapp-btn">
+                                <i class="fa fa-whatsapp"></i>
+                            </a>
+                        </div>
+                        <span class="copyright-notice">&copy;2022 Bharatravel. All rights reserved.</span>
+                    </div>
+                    <div>
+                        <h6 class="title footer-title">Categories</h6>
+                        <ul class="footer-list list">
+                            <li class="list-item">
+                                <a href="#popular-tags" class="list-link">Travel</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#popular-tags" class="list-link">Food</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#popular-tags" class="list-link">Technology</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#popular-tags" class="list-link">Health</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="list-item">
+                                    <a href="#popular-tags" class="list-link">Fitness</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h6 class="title footer-title">Useful links</h6>
+                        <ul class="footer-list list">
+                            <li class="list-item">
+                                <a href="#" class="list-link">Home</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="list-link">Trending Blogs</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#popular-tags" class="list-link">Popular Tags</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#blogs" class="list-link">blogs</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="list-link">Recent</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h6 class="title footer-title">Company</h6>
+                        <ul class="footer-list list">
+                            <li class="list-item">
+                                <a href="contact.html" class="list-link">Contact us</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="help.html" class="list-link">Help</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="landing-page.html" class="list-link">Login</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="develop.html" class="list-link">Developers</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#subscription" class="list-link">Subscription</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </div>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
+	<script src="../JAVASCRIPT/owl.carousel.min.js"></script>
+    <script src="../JAVASCRIPT/index.js"></script>
+</body>
+</html>

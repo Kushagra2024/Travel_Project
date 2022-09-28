@@ -1,0 +1,121 @@
+/* .nav-flight{
+    position: -webkit-sticky; 
+} */
+
+.search-box{
+    width: 100%;
+    height: 88vh;
+    background: url('../IMAGES/alexander-redl-S9qxkJN0f4Q-unsplash.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.search-box > p{
+    font-size: 30px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    display: flex;
+    margin-left: 20rem;
+    padding-top: 10rem;
+}
+.search-elements{
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: transparent;
+    border-radius: 0.25rem;
+}
+.origin-des-box{
+    width: 80%;
+    margin:auto;
+    padding: 10px;
+    background-color: #112347c9;
+    border-radius: 4px;
+}
+.origin-des-box .flight_form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.flight_form .radios{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+.radio_btn{
+    padding: 8px 14px;
+    text-transform: uppercase;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.ori-des-box{
+    display: flex;
+}
+.ori-des-box p{
+    color: aliceblue;
+    font-size: 16px;
+    padding: 6px 1px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.from-to-inputbox{
+    padding: 14px;
+    border: none;
+    border:2px solid white;
+    width: 25rem;
+
+}
+.from .from-to-inputbox{
+    border-right: 1px solid black;
+    border-radius: 4px 0px 0px 4px;
+}
+.from-to-inputbox::placeholder{
+    color: black;
+    font-size: medium;
+    font-family: cursive;
+}
+.from-input .dep-ret-date{
+    padding: 13px;   
+    border: none;
+    border: 2px solid white;
+    border-left: 1px solid black;
+    background-color: white;
+}
+.cbt-btn{
+    padding: 11px;
+    font-size: 16px;
+    font-family: cursive;
+    color: black;
+    background-color: white;
+    border: none;
+    border: 1.5px solid white;
+    border-left: 1px solid black;
+    border-radius: 0px 4px 4px 0px;
+    width: 20.3rem;
+}
+
+.search_train{
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+}
+.search_train_btn{
+    font-size: 16px;
+    padding: 10px;
+    width: 18rem;
+    background-color: rgb(21, 181, 199);
+    border: none;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    justify-items: center;
+}
+.from-to-inputbox,.dep-ret-date,.search_flight:hover{
+    border-color:none !important ;
+}
+.fa-solid {
+    transform: translateY(2px);
+    font-size: 1.8rem;
+    transform: rotateY(1px);
+}
